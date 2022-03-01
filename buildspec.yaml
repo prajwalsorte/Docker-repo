@@ -12,12 +12,12 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t hello-repository2:latest .
-      - docker tag catnip:latest 580338969199.dkr.ecr.ap-south-1.amazonaws.com/test1   
+      - docker tag catnip:latest 580338969199.dkr.ecr.ap-south-1.amazonaws.com/hello-repository2  
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 580338969199.dkr.ecr.ap-south-1.amazonaws.com/test1
+      - docker push 580338969199.dkr.ecr.ap-south-1.amazonaws.com/hello-repository2
 artifacts:
   files:
     - '**/*'
